@@ -10,11 +10,17 @@ while '1' == '1':
   a = input('請輸入指令:')
   if a == '1':
     b = input('請輸入要查詢的英文單字:')
-    print(b,'=>',myDict1[b])
+    try:
+        print(b,'=>',myDict1[b])
+    except KeyError:
+        print('查無此單字')
     pass
   elif a == '2':
-    c = input('請輸入要查詢的中文單字')
-    print(c,'=>',myDict2[c])
+    c = input('請輸入要查詢的中文單字:')
+    try:
+        print(c,'=>',myDict2[c])
+    except KeyError:
+        print('查無此單字')
     pass
   elif a == '3':
     break
